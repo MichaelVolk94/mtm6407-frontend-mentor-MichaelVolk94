@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+  --font-family: 'Inter', sans-serif;
+  --paragraph-size: 15px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    max-width: 1026px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;   
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--dark-grayish-blue);
+    font-size: 1rem;
+}
+
+.nav-menu a:hover {
+    color: var(--soft-red);
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 15px;
+    max-width: 1026px;
+    margin: 0 auto;
+}
+  
+.main-image {
+    width: 100%;
+    object-fit: cover;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.main-header{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3; 
+}
+
+.main-content {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3; 
+}
+
+.main-header h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1em;
+}
+
+.main-content p {
+  /* margin-top: 2rem; */
+  font-size: 1rem;
+  color: var(--dark-grayish-blue);
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: var(--soft-red);
+  color: var(--very-dark-blue);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 16px 34px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: inherit;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.read-more:hover {
+  background-color: var(--soft-orange);
+}
+
+.sidebar {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  padding: 0.6rem 1.5rem;
+  grid-column-start: 4;
+  grid-column-start: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: flex;
+  flex-flow: column;
+  justify-content:space-around;
+}
+
+.sidebar h2 {
+  color: var(--soft-orange) ;
+  font-size: 3rem;
+  /* margin-bottom: 1rem; */
+}
+
+.sidebar h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  /* margin-bottom: 0.5rem; */
+}
+
+.sidebar p {
+  font-size: 1rem;
+  color: var(--grayish-blue);
+}
+
+/* Bottom Cards  */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 0.5rem;
+  /* grid-column: span 2; */
+  padding-top: 3rem;
+  max-width: 1026px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+}
+
+.card img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: var(  --soft-red);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card p {
+  font-size:1rem;
+  color: var(--dark-grayish-blue);
+}
+
+
+/* Mobile version */
+
+@media (max-width: 800px) {
+body {
+  margin: 6% 4%;
+}
+
+  .grid-layout {
+  display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        "img" "sidebar" "p" "sidebar" "card1" "card2" "card3";
+        gap: 30px;
+        display: inline-block;
+}
+
+.grid-layout, .main-header {
+  background-image: url(images/image-web-3-mobile.jpg);
+}
+
+.grid-layout, h1{
+        padding: 0;
+        font-size: 2.5rem;
+    }
+
+.cards{
+  display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    .cards p{
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+.nav-menu {
+  width: 250px;
+  background-color: white;
+  color: black;
+  height: 100vh;
+  padding-top: 20px;
+  position: fixed;
+}
+
+.nav-menu li {
+  padding: 3px;
+}
+
+.main-header {
+  min-height: 200px;
+}
+
+.read-more {
+  display: inline-block;
+}
+
+}
