@@ -4,4 +4,4 @@ My Frontend Mentor assignment was based off of the newspage challenge. My overal
 
 Unfortunatley I struggled making the mobile sidebar. No matter what I did it just would not work and it would stay white on the left side of the screen. However, everything looks almost exactly like the examples I was given. So it won't be too much of a reduction.
 
-Michael Volk - 041036270 - News Homepage
+**Michael Volk - 041036270 - News Homepage**
