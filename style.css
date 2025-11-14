@@ -16,6 +16,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    background-color: #fefdf8;
 }
 
 .navbar {
@@ -47,6 +48,10 @@ body {
 
 .nav-menu a:hover {
     color: var(--soft-red);
+}
+
+.nav-menu .mobile-toggle, .nav-menu .mobile-menu {
+  display: none;
 }
 
 .grid-layout {
@@ -221,16 +226,44 @@ body {
     }
 
 .nav-menu {
-  width: 250px;
-  background-color: white;
+  width: 280px;
+  background-color: #fefdf8;
   color: black;
   height: 100vh;
   padding-top: 20px;
   position: fixed;
+  top: 0;
+  right: 0;
 }
 
 .nav-menu li {
   padding: 3px;
+}
+
+.nav-menu .desktop-menu {
+  display: none;
+}
+
+.nav-menu .mobile-toggle, .nav-menu .mobile-menu {
+  display: block;
+}
+
+.nav-menu .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mobile-menu.hidden {
+  display: none;
+}
+
+.nav-menu .mobile-toggle {
+  border: 0;
+  background: transparent;
+  padding: 10px 40px;
+  cursor: pointer;
+  padding-bottom: 40px;
 }
 
 .main-header {
